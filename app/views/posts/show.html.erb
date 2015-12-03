@@ -8,7 +8,8 @@
   <%= @post.body %>
 </p>
 
-<h2>Comments</h2>
+<h3>Comments (<%= @post.comments.count %>)</h3>
+
 <%= render @post.comments %>
 
 <% if user_signed_in? %> 
