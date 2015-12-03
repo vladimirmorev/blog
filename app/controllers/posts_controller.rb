@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:destroy,:edit,:create]
+
   def index
   	@posts = Post.all
   end
@@ -17,6 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
  
     if @post.save
       redirect_to @post

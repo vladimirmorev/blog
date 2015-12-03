@@ -7,9 +7,10 @@
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<% if (user_signed_in? && (current_user.id == comment.user_id)) || (current_user && current_user.admin?) %> 
+	<p>
+	  <%= link_to 'Destroy Comment', [comment.post, comment],
+	               method: :delete,
+	               data: { confirm: 'Are you sure?' } %>
+	</p>
+<% end %>
