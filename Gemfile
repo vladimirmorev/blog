@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'         
 gem 'bootstrap-will_paginate', '~> 0.0.10'
-
+gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 
 # Use jquery as the JavaScript library
