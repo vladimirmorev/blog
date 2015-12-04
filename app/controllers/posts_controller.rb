@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:destroy,:edit,:create]
+  before_filter :authenticate_user!, :only => [:destroy,:edit,:create,:new]
 
   def index
-  	@posts = Post.all
+  	@posts = Post.paginate(page: params[:page], :per_page => 6)
   end
 
   def show
