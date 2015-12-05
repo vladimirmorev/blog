@@ -19,8 +19,9 @@ gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 
 gem 'devise', '~> 3.5', '>= 3.5.2'
-gem 'omniauth-oauth2', '~> 1.4'
+
 gem 'omniauth-facebook', '~> 3.0'
+gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
