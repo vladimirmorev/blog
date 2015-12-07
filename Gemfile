@@ -23,6 +23,7 @@ gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'omniauth-facebook', '~> 3.0'
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 gem 'omniauth-linkedin', '~> 0.2.0'
+gem 'omniauth-google-oauth2', '~> 0.2.10'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

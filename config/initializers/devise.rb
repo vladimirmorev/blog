@@ -10,6 +10,7 @@ Devise.setup do |config|
   config.omniauth :facebook, "1482633045378401", "9e9355aace0bc3555548b9229ae73252"
   config.omniauth :twitter, Rails.application.secrets.twitter_api_key, Rails.application.secrets.twitter_api_secret
   config.omniauth :linkedin, Rails.application.secrets.linkedin_api_key, Rails.application.secrets.linkedin_api_secret
+  config.omniauth :google_oauth2, Rails.application.secrets.google_api_key, Rails.application.secrets.google_api_secret
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

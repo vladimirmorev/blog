@@ -7,13 +7,14 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable,
-         :omniauthable, :omniauth_providers => [:twitter, :facebook, :linkedin]
+         :omniauthable, :omniauth_providers => [:twitter, :facebook, :linkedin, :google_oauth2]
  
 
   SOCIALS = {
     facebook: 'Facebook',
     twitter: 'Twitter',
-    linkedin: 'Linkedin'
+    linkedin: 'Linkedin',
+    google_oauth2: 'Google+'
   }  
 
   def self.from_omniauth(auth, current_user)
