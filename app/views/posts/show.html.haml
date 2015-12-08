@@ -1,0 +1,16 @@
+%p
+  %strong Title:
+  = @post.title
+%p
+  %strong Text:
+  = @post.body
+%h3
+  Comments (#{@post.comments.count})
+= render @post.comments
+- if user_signed_in?
+  %h2 Add a comment:
+  = render 'comments/form'
+- if (user_signed_in? && (current_user.id == @post.user_id)) || (current_user && current_user.admin?)
+  = link_to 'Edit', edit_post_path(@post)
+  |
+= link_to 'Back', posts_path

@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'haml', '~> 4.0', '>= 4.0.7'
+gem "haml-rails", "~> 0.9"
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'         
 gem 'bootstrap-will_paginate', '~> 0.0.10'
