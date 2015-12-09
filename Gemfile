@@ -26,6 +26,7 @@ gem 'omniauth-facebook', '~> 3.0'
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 gem 'omniauth-linkedin', '~> 0.2.0'
 gem 'omniauth-google-oauth2', '~> 0.2.10'
+gem 'omniauth-vkontakte', '~> 1.3', '>= 1.3.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

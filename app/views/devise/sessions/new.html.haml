@@ -18,11 +18,4 @@
         %label
           = f.check_box :remember_me
           Remember me
-    = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
-    %br/
-    = link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter)
-    %br/
-    = link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin)
-    %br/
-    = link_to "Sign in with Google+", user_omniauth_authorize_path(:google_oauth2)
-    %br/
+    = render "social"
