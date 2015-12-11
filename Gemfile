@@ -20,6 +20,7 @@ gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 
+
 gem 'devise', '~> 3.5', '>= 3.5.2'
 
 gem 'omniauth-facebook', '~> 3.0'
@@ -29,10 +30,12 @@ gem 'omniauth-google-oauth2', '~> 0.2.10'
 gem 'omniauth-vkontakte', '~> 1.3', '>= 1.3.6'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 
+gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem 'rails-bootstrap-markdown'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
