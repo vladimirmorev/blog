@@ -24,7 +24,6 @@ gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 
 gem 'omniauth-facebook', '~> 3.0'
-gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 gem 'omniauth-linkedin', '~> 0.2.0'
 gem 'omniauth-google-oauth2', '~> 0.2.10'
 gem 'omniauth-vkontakte', '~> 1.3', '>= 1.3.6'
