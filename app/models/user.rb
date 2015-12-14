@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   TEMP_EMAIL_PREFIX = 'change@me'
   TEMP_EMAIL_REGEX = /\Achange@me/
 
-  validates :name, presence: true, uniqueness: true, length: {minimum: 3}
+  validates :name, presence: true, length: {minimum: 3}
 
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable
@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
       # Create the user if it's a new registration
       if user.nil?
         user = User.new(
-          name: auth.extra.raw_info.name,
+          name: auth.extra.raw_info.name || auth.info.nickname || auth.uid,
           #username: auth.info.nickname || auth.uid,
           email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
           password: Devise.friendly_token[0,20]
