@@ -6,6 +6,7 @@
       %h3
         = link_to post.title, post_path(post)
       %p= markdown(post.body)
+      %p= "Posted by #{ post.user.name }"
       %button.btn.btn-default= link_to 'Show', post_path(post)
       - if (user_signed_in? && (current_user.id == post.user_id)) || (current_user && current_user.admin?)
         %button.btn.btn-default= link_to 'Edit', edit_post_path(post)
