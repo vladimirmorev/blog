@@ -1,6 +1,4 @@
-%p
-  %strong Commenter:
-  = comment.user.name
+%p= "#{comment.user.name}  #{comment.created_at.strftime("commented on %b %d, %Y at %H:%M")}"
 %p
   %strong Comment:
   = comment.body
