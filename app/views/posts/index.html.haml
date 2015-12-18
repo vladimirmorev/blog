@@ -1,8 +1,8 @@
 %h2 Listing posts
 = will_paginate
-%div
+%div.row
   - @posts.each do |post|
-    %div
+    %div.col-sm-12.col-md-10.col-lg-9.col-md-offset-1
       %h3
         = link_to post.title, post_path(post)
       %p= markdown(truncate(post.body, length: 300))
