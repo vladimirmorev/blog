@@ -6,7 +6,9 @@
       %h3
         = link_to post.title, post_path(post)
       %p= markdown(truncate(post.body, length: 300))
-      %p= "#{post.user.name } #{post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
+      %div
+        = link_to "#{post.user.name }", user_path(post.user.id)
+        = "#{post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
       %button.btn.btn-default= link_to 'Show', post_path(post)
       - if (user_signed_in? && (current_user.id == post.user_id)) || (current_user && current_user.admin?)
         %button.btn.btn-default= link_to 'Edit', edit_post_path(post)
