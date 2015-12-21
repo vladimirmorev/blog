@@ -22,6 +22,8 @@ gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 
 
 gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'rails_admin', '~> 0.8.1'
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
 
 gem 'omniauth-facebook', '~> 3.0'
 gem 'omniauth-linkedin', '~> 0.2.0'
