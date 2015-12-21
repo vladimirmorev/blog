@@ -2,7 +2,7 @@
 %p
   %strong Comment:
   = comment.body
-- if (user_signed_in? && (current_user.id == comment.user_id)) || (current_user && current_user.admin?)
+- if can? :edit, comment
   %p
     = link_to 'Destroy Comment', [comment.post, comment], |
       method: :delete,                                    |
