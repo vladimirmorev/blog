@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:destroy, :create]
+  load_and_authorize_resource
 
   def create
     @post = Post.find(params[:post_id])

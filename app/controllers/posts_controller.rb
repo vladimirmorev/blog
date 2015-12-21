@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:destroy,:edit,:create,:new]
+  load_and_authorize_resource
 
   def index
   	@posts = Post.paginate(page: params[:page], :per_page => 6)
