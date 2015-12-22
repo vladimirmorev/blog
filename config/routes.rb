@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }  
 
   get 'users/:id' => 'users#show', as: 'user'
+
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
   
   resources :posts do
      resources :comments
