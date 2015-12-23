@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource :except => [:index, :show]  
+  load_and_authorize_resource :except => [:index, :show]
+  
 
   def index
   	@posts = Post.paginate(page: params[:page], :per_page => 6)

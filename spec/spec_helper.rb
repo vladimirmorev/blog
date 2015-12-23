@@ -16,8 +16,10 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'rspec/rails'
-require 'capybara/rails'
+
+require 'rubygems'
+require 'factory_girl'
+require 'capybara'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
