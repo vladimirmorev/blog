@@ -1,9 +1,11 @@
-%p= "#{comment.user.name}  #{comment.created_at.strftime("commented on %b %d, %Y at %H:%M")}"
+%div
+  = link_to "#{comment.user.name}", user_path(comment.user.try.id)  
+  = "#{comment.created_at.strftime("commented on %b %d, %Y at %H:%M")}"
 %p
   %strong Comment:
   = comment.body
 - if can? :edit, comment
   %p
-    = link_to 'Destroy Comment', [comment.post, comment], |
+    %button.btn.btn-default= link_to 'Destroy Comment', [comment.post, comment], |
       method: :delete,                                    |
       data: { confirm: 'Are you sure?' }                  |
