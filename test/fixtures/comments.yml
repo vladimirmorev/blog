@@ -4,4 +4,5 @@
 comment_<%= n %>:
   post: one  
   body: this is comment number <%= n %>
+  user: john
 <% end %>
