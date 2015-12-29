@@ -1,5 +1,5 @@
 class AddUseridToComment < ActiveRecord::Migration
-  def change
-    add_column :comments, :user_id, :integer
+  def change        
+    add_reference(:comments, :user, foreign_key: true, index: true)
   end
 end
