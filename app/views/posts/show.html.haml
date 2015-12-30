@@ -1,9 +1,6 @@
-%p
-  %strong Title:
-  = @post.title
-%p
-  %strong Text:
-  = markdown(@post.body)
+= "#{@post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
+%h3= @post.title
+%p= markdown(@post.body)
 - if can? :edit, @post
   %button.btn.btn-default= link_to 'Edit', edit_post_path(@post) 
 %button.btn.btn-default= link_to 'Back', posts_path
