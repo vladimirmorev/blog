@@ -1,7 +1,7 @@
 %h3= @user.name
 %span= "Registered on #{@user.created_at.strftime('%b %d, %Y')}"
 
-%h1 Posts
+%h1 Posts (#{@user.posts.count})
 = will_paginate @user.posts.paginate(page: params[:page], :per_page => 6)
 %div.row
   - @user.posts.each do |post|
@@ -19,7 +19,7 @@
             data: { confirm: 'Are you sure?' }  |
 = will_paginate @user.posts.paginate(page: params[:page], :per_page => 6)
 
-%h1 Comments
+%h1 Comments (#{@user.comments.count})
 = will_paginate @user.comments.paginate(page: params[:page], :per_page => 15)
 %div.row
   - @user.comments.each do |comment|
