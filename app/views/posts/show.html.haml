@@ -1,3 +1,4 @@
+= link_to "#{@post.user.name}", user_path(@post.user.id)
 = "#{@post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
 %h3= @post.title
 %p= markdown(@post.body)
