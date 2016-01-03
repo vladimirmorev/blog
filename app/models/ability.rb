@@ -11,8 +11,7 @@ class Ability
       can :dashboard                  # allow access to dashboard    
     else 
       can :read, :all  
-      can :manage, Post, user_id: user.id 
-      can :manage, Comment, user_id: user.id  
+      can :manage, [Post, Comment], user_id: user.id      
       can :manage, User, id: user.id 
     end
   end
