@@ -7,6 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 ENV.update YAML.load_file('config/application.yml')[Rails.env] rescue {}
+#fix fix fix
 
 module Blog
   class Application < Rails::Application
