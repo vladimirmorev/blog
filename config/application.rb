@@ -8,8 +8,6 @@ Bundler.require(*Rails.groups)
 
 ENV.update YAML.load_file('config/application.yml')[Rails.env] rescue {}
 
-config.secret_key_base = ENV["secret_key_base"]
-
 module Blog
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
