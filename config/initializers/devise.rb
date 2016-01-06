@@ -12,8 +12,10 @@ Devise.setup do |config|
   config.omniauth :linkedin, ENV["linkedin_api_key"], ENV["linkedin_api_secret"]
   config.omniauth :google_oauth2, ENV["google_api_key"], ENV["google_api_secret"]
   config.omniauth :vkontakte, ENV["vkontakte_api_key"], ENV["vkontakte_api_secret"]
-
-  config.secret_key = '23022e0a115fb19d0126ae2ed760d6cf593fcde7c5dd7d316146c10aa108a36d2b1b9de76a6faecb29885f82ef28c953574b75e6d43f19f7b2e56438010c59e5'#ENV["devise_secret_key"]
+  
+  if Rails.env.production?
+    config.secret_key = ENV["devise_secret_key"]
+  end
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
