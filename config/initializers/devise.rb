@@ -12,6 +12,8 @@ Devise.setup do |config|
   config.omniauth :linkedin, ENV["linkedin_api_key"], ENV["linkedin_api_secret"]
   config.omniauth :google_oauth2, ENV["google_api_key"], ENV["google_api_secret"]
   config.omniauth :vkontakte, ENV["vkontakte_api_key"], ENV["vkontakte_api_secret"]
+
+  config.secret_key = ENV["devise_secret_key"]
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
