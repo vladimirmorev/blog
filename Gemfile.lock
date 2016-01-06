@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/alexpeattie/heroku_secrets.git
+  revision: 717af8e0acf399bc88d2c8c1a7e230023942af0f
+  specs:
+    heroku_secrets (0.0.2)
+
+GIT
   remote: https://github.com/ysbaddaden/minitest-colorize
   revision: 81f2dd6aee81c83debc31572608fa89d6d9e1a19
   specs:
@@ -327,6 +333,7 @@ DEPENDENCIES
   guard-minitest (~> 2.3.2)
   haml (~> 4.0, >= 4.0.7)
   haml-rails (~> 0.9)
+  heroku_secrets!
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
