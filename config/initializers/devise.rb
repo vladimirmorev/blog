@@ -8,7 +8,7 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'f7d2086ac9afe7e9889d9b2c06fcc9395009b537ca65b823ef021200d400606a60fc53a12941658b777615cd9a84998d8415bf8d0c10cca8913aa6e200467890'
   config.omniauth :facebook, ENV["facebook_api_key"], ENV["facebook_api_secret"]
-  #config.omniauth :twitter, ENV["twitter_api_key"], ENV["twitter_api_secret"]
+  config.omniauth :twitter, ENV["twitter_api_key"], ENV["twitter_api_secret"]
   config.omniauth :linkedin, ENV["linkedin_api_key"], ENV["linkedin_api_secret"]
   config.omniauth :google_oauth2, ENV["google_api_key"], ENV["google_api_secret"]
   config.omniauth :vkontakte, ENV["vkontakte_api_key"], ENV["vkontakte_api_secret"]
@@ -20,7 +20,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'blog-heroku@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
