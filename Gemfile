@@ -70,6 +70,8 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem "bullet"
+  gem 'rails_best_practices', '~> 1.15', '>= 1.15.7'
 end
 
 group :production do
