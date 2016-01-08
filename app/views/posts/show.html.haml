@@ -9,5 +9,5 @@
 = render @post.comments
 - if user_signed_in?
   %h2 Add a comment:
-  = render 'comments/form'
+  = render 'comments/form', :post => @post
 
