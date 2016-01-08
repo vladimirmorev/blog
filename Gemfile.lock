@@ -55,6 +55,8 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap-social-rails (4.8.0)
+      railties (>= 3.1)
     bootstrap-will_paginate (0.0.10)
       will_paginate
     builder (3.2.2)
@@ -91,6 +93,8 @@ GEM
       thor (~> 0.14)
     font-awesome-rails (4.5.0.0)
       railties (>= 3.2, < 5.0)
+    font-awesome-sass (4.5.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -321,12 +325,14 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.3, >= 3.3.6)
+  bootstrap-social-rails (~> 4.8)
   bootstrap-will_paginate (~> 0.0.10)
   byebug (= 3.4.0)
   cancancan (~> 1.13, >= 1.13.1)
   coffee-rails (~> 4.1.0)
   devise (~> 3.5, >= 3.5.2)
   figaro (~> 1.1, >= 1.1.1)
+  font-awesome-sass
   guard-minitest (~> 2.3.2)
   haml (~> 4.0, >= 4.0.7)
   haml-rails (~> 0.9)

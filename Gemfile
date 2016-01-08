@@ -16,6 +16,9 @@ gem "haml-rails", "~> 0.9"
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'         
 gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'font-awesome-sass'
+gem 'bootstrap-social-rails', '~> 4.8'
+
 gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 
 gem 'devise', '~> 3.5', '>= 3.5.2'

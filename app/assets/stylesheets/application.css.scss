@@ -10,11 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *= require_tree .
- *= require_self
+ *= require_self 
+ *= require bootstrap-social
  */
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-sprockets";
 @import "bootstrap-markdown";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 body {
@@ -62,4 +65,12 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+.btn-block + .btn-block {
+    margin-top: 5px;
+}
+
+.social-buttons {
+  margin-top: 25px;
 }
