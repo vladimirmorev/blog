@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
+  before_filter :ensure_signup_complete, only: [:new, :create, :update, :destroy]
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_path, :alert => exception.message
