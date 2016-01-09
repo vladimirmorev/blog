@@ -12,7 +12,7 @@ Devise.setup do |config|
   config.omniauth :linkedin, ENV["linkedin_api_key"], ENV["linkedin_api_secret"]
   config.omniauth :google_oauth2, ENV["google_api_key"], ENV["google_api_secret"]
   config.omniauth :vkontakte, ENV["vkontakte_api_key"], ENV["vkontakte_api_secret"]
-  
+
   if Rails.env.production?
     config.secret_key = ENV["devise_secret_key"]
   end

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def show	
-    @user = User.find(params[:id])  
+    @user = User.find(params[:id])
   end
 
   def update
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   # GET/PATCH /users/:id/finish_signup
   def finish_signup
-    # authorize! :update, @user 
+    # authorize! :update, @user
     if request.patch? && params[:user] #&& params[:user][:email]
       if @user.update(user_params)
         @user.skip_reconfirmation!
@@ -42,8 +42,8 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  private   
+
+  private
 
     def user_params
       accessible = [ :name, :email ] # extend with your own params

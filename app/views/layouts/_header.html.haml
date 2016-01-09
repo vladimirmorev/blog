@@ -1,11 +1,11 @@
 %body
   %header.navbar.navbar-fixed-top.navbar-inverse
-    .container  
+    .container
       .navbar-header
         %button.navbar-toggle{type:'button',:data => {:toggle => 'collapse', :target => '.navbar-collapse'}}
           %span.icon-bar
           %span.icon-bar
-          %span.icon-bar           
+          %span.icon-bar
       .collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-right
           %li= link_to 'Home', root_path
@@ -16,4 +16,3 @@
           - else
             %li= link_to "Sign up", new_user_registration_path
             %li= link_to "Login", new_user_session_path
-      

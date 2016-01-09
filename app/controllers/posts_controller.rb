@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource 
-  
+  load_and_authorize_resource
 
   def index
   	@posts = Post.paginate(page: params[:page], :per_page => 6)
@@ -13,36 +12,35 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def edit    
+  def edit
   end
 
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
- 
+
     if @post.save
       redirect_to @post
     else
       render 'new'
-    end   
-  end   
+    end
+  end
 
-  def update     
+  def update
     if @post.update(post_params)
       redirect_to @post
     else
       render 'edit'
     end
-  end 
+  end
 
-  def destroy   
+  def destroy
     @post.destroy
-   
     redirect_to posts_path
   end
 
   private
-	  def post_params
-	    params.require(:post).permit(:title, :body)
-	  end
+    def post_params
+      params.require(:post).permit(:title, :body)
+    end
 end

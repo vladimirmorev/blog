@@ -9,7 +9,7 @@
       %h4
         = link_to post.title, post_path(post)
       %p= markdown(truncate(post.body, length: 150))
-      %div        
+      %div
         = "#{post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
       %button.btn.btn-default= link_to 'Show', post_path(post)
       - if (user_signed_in? && (current_user.id == post.user_id)) || (current_user && current_user.admin?)
@@ -27,6 +27,6 @@
       %h4
         = link_to comment.post.title, post_path(comment.post)
       %p= markdown(truncate(comment.body, length: 150))
-      %div        
-        = "commented on #{comment.created_at.strftime("%b %d, %Y at %H:%M")}"      
+      %div
+        = "commented on #{comment.created_at.strftime("%b %d, %Y at %H:%M")}"
 = will_paginate @user.comments.paginate(page: params[:page], :per_page => 15)

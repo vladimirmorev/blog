@@ -1,5 +1,5 @@
 %div
-  = link_to "#{comment.user.name}", user_path(comment.user.id)  
+  = link_to "#{comment.user.name}", user_path(comment.user.id)
   = "#{comment.created_at.strftime("commented on %b %d, %Y at %H:%M")}"
 %p
   %strong Comment:

@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem "haml-rails", "~> 0.9"
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-gem 'will_paginate', '~> 3.0', '>= 3.0.7'         
+gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'font-awesome-sass'
 gem 'bootstrap-social-rails', '~> 4.8'
@@ -77,8 +77,5 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma'  
+  gem 'puma'
 end
-
-
-
