@@ -25,7 +25,7 @@
   - @user.comments.each do |comment|
     %div.col-sm-12.col-md-10.col-lg-9
       %h4
-        = link_to comment.post.title, post_path(comment.post)
+        = link_to comment.post_title, post_path(comment.post)
       %p= markdown(truncate(comment.body, length: 150))
       %div
         = "commented on #{comment.created_at.strftime("%b %d, %Y at %H:%M")}"
