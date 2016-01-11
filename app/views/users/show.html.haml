@@ -18,15 +18,3 @@
             method: :delete,                    |
             data: { confirm: 'Are you sure?' }  |
 = will_paginate @user.posts.paginate(page: params[:page], :per_page => 6)
-
-%h1 Comments (#{@user.comments.count})
-= will_paginate @user.comments.paginate(page: params[:page], :per_page => 15)
-%div.row
-  - @user.comments.each do |comment|
-    %div.col-sm-12.col-md-10.col-lg-9
-      %h4
-        = link_to comment.post_title, post_path(comment.post)
-      %p= markdown(truncate(comment.body, length: 150))
-      %div
-        = "commented on #{comment.created_at.strftime("%b %d, %Y at %H:%M")}"
-= will_paginate @user.comments.paginate(page: params[:page], :per_page => 15)
