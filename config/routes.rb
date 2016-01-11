@@ -7,10 +7,8 @@ Rails.application.routes.draw do
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
-  resources :posts do
-     resources :comments, only: [:create, :destroy]
-  end
-
+  resources :posts 
+  
   root 'posts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
