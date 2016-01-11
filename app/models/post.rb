@@ -1,5 +1,4 @@
-class Post < ActiveRecord::Base
-  has_many :comments, dependent: :destroy
+class Post < ActiveRecord::Base 
   belongs_to :user
   delegate :name, :to => :user, :prefix => true
 
