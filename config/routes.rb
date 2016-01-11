@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'  
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   get 'users/:id' => 'users#show', as: 'user'
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
-  resources :posts 
-  
+  resources :posts
+
   root 'posts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

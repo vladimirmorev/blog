@@ -1,4 +1,4 @@
-class Post < ActiveRecord::Base 
+class Post < ActiveRecord::Base
   belongs_to :user
   delegate :name, :to => :user, :prefix => true
 
