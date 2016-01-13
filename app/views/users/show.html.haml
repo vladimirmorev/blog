@@ -1,20 +1,21 @@
-%h3= @user.name
-%span= "Registered on #{@user.created_at.strftime('%b %d, %Y')}"
-
-%h1 Posts (#{@user.posts.count})
-= will_paginate @user.posts.paginate(page: params[:page], :per_page => 6)
 %div.row
-  - @user.posts.each do |post|
-    %div.col-sm-12.col-md-10.col-lg-9
-      %h4
-        = link_to post.title, post_path(post)
-      %p= markdown(truncate(post.body, length: 150))
-      %div
-        = "#{post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
-      %button.btn.btn-default= link_to 'Show', post_path(post)
-      - if (user_signed_in? && (current_user.id == post.user_id)) || (current_user && current_user.admin?)
-        %button.btn.btn-default= link_to 'Edit', edit_post_path(post)
-        %button.btn.btn-default= link_to 'Destroy', post_path(post), |
-            method: :delete,                    |
-            data: { confirm: 'Are you sure?' }  |
-= will_paginate @user.posts.paginate(page: params[:page], :per_page => 6)
+  %div.col-sm-12.col-md-10.col-lg-9.col-md-offset-1
+    %h3= @user.name
+    %span= "Registered on #{@user.created_at.strftime('%b %d, %Y')}"
+    %h1 Posts (#{@user.posts.count})
+    = will_paginate @user.posts.paginate(page: params[:page], :per_page => 6)
+    %div.row
+      - @user.posts.each do |post|
+        %div.col-sm-12.col-md-10.col-lg-9
+          %h4
+            = link_to post.title, post_path(post)
+          %p= markdown(truncate(post.body, length: 150))
+          %div
+            = "#{post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
+          %button.btn.btn-default= link_to 'Show', post_path(post)
+          - if (user_signed_in? && (current_user.id == post.user_id)) || (current_user && current_user.admin?)
+            %button.btn.btn-default= link_to 'Edit', edit_post_path(post)
+            %button.btn.btn-default= link_to 'Destroy', post_path(post), |
+                method: :delete,                    |
+                data: { confirm: 'Are you sure?' }  |
+    = will_paginate @user.posts.paginate(page: params[:page], :per_page => 6)
