@@ -1,11 +1,11 @@
-tom:  
-  name: Tom  
-  email: test@example.org  
+tom:
+  name: Tom
+  email: test@example.org
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   confirmed_at: <%= Time.now %>
 
-john:  
-  name: John  
-  email: test1@example.org  
+john:
+  name: John
+  email: test1@example.org
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   confirmed_at: <%= Time.now %>
