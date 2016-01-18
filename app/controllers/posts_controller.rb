@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      flash[:notice] = "Your post waiting for admin approval"
+      flash[:notice] = "Your article is awaiting moderation"
       redirect_to root_path
     else
       render 'new'
