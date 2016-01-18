@@ -2,10 +2,11 @@ class PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
-  	@posts = Post.paginate(page: params[:page], :per_page => 6)
+    @posts = Post.approved.paginate(page: params[:page], :per_page => 6)
   end
 
-  def show  	
+  def show
+    @post = Post.approved.find(params[:id])
   end
 
   def new
@@ -13,13 +14,15 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.approved.find(params[:id])
   end
 
   def create
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      redirect_to @post
+      flash[:notice] = "Your post waiting for admin approval"
+      redirect_to root_path
     else
       render 'new'
     end

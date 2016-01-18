@@ -2,8 +2,10 @@ one:
   user: tom  
   title: MyString
   body: MyText
+  approved: true
 
 two:
   user: john
   title: MyString
-  body: MyText  
+  body: MyText
+  approved: true 

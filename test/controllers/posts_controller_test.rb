@@ -27,7 +27,7 @@ class PostsControllerTest < ActionController::TestCase
       post :create, post: { body: @post.body, title: @post.title }
     end
 
-    assert_redirected_to post_path(assigns(:post))
+    assert_redirected_to root_path
   end
 
   test "should show post" do
