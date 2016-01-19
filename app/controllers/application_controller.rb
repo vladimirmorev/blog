@@ -10,7 +10,11 @@ class ApplicationController < ActionController::Base
     redirect_to main_app.root_path, :alert => exception.message
   end
 
-   def ensure_signup_complete
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+
+  def ensure_signup_complete
     # Ensure we don't go into an infinite loop
     return if action_name == 'finish_signup'
 

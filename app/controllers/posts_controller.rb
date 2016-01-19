@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.approved.find(params[:id])
+    @post = Post.find(params[:id]) or not_found
   end
 
   def new
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.approved.find(params[:id])
+    @post = Post.approved.find(params[:id]) or not_found
   end
 
   def create

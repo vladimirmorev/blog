@@ -1,12 +1,15 @@
 %div.row
   %div.col-sm-12.col-md-10.col-lg-9.col-md-offset-1
-    %h3= @post.title
-    = link_to "#{@post.user_name}", user_path(@post.user.id)
-    = "#{@post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
-    %p= markdown(@post.body)
-    - if can? :edit, @post
-      %button.btn.btn-default= link_to 'Edit', edit_post_path(@post)
-      %button.btn.btn-default= link_to 'Destroy', post_path(@post), |
-                method: :delete,                    |
-                data: { confirm: 'Are you sure?' }  |
-    = render 'disqus'
+    -if @post.approved || (can? :edit, @post)
+      %h3= @post.title
+      = link_to "#{@post.user_name}", user_path(@post.user.id)
+      = "#{@post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
+      %p= markdown(@post.body)
+      - if can? :edit, @post
+        %button.btn.btn-default= link_to 'Edit', edit_post_path(@post)
+        %button.btn.btn-default= link_to 'Destroy', post_path(@post), |
+                  method: :delete,                    |
+                  data: { confirm: 'Are you sure?' }  |
+      = render 'disqus'
+    -else
+      = not_found
