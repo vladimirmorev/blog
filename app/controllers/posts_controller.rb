@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     if @post.save
       PostMailer.post_pending_email(current_user, @post).deliver_later
       flash[:notice] = "Your article is awaiting moderation"
-      redirect_to root_path
+      redirect_to @post
     else
       render 'new'
     end

@@ -6,7 +6,7 @@ class PostMailer < ApplicationMailer
     @post = post
     @url  = post_url(@post)
     #you have to manually set admin email
-    mail(to: "v.morev90@gmai.com", subject: "#{@user.name} created new post")
+    mail(to: "v.morev90@gmail.com", subject: "#{@user.name} created new post")
   end
 
 end
