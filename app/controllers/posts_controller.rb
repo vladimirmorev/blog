@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.approved.find(params[:id]) or not_found
+    @post = Post.find(params[:id]) or not_found
   end
 
   def create
@@ -40,6 +40,20 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to posts_path
+  end
+
+  def approve
+    @post = Post.find(params[:id])
+    @post.approved = !@post.approved
+    if @post.save
+      if @post.approved
+        flash[:notice] = "Approved"
+      else
+        flash[:notice] = "Rejected"
+      end
+
+      redirect_to @post
+    end
   end
 
   private

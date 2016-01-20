@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
-  resources :posts
+  resources :posts do
+    member do
+      get "approve", to: "posts#approve"
+    end
+  end
 
   root 'posts#index'
 
