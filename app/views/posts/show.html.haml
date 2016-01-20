@@ -11,7 +11,7 @@
                   method: :delete,                    |
                   data: { confirm: 'Are you sure?' }  |
         - if can? :approve, @post
-          %button.btn.btn-default= link_to 'Approve', approve_post_path(@post)
+          %button.btn.btn-default= link_to ( @post.approved ? "Reject" : "Approve"), approve_post_path(@post)
       = render 'disqus'
     -else
       %h1= "not approved yet"
