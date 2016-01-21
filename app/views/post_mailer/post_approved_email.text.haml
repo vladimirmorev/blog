@@ -1,4 +1,4 @@
 = @post.title
 /===============================================
-= @post.body
+= truncate(@post.body, length: 200)
 = @url
