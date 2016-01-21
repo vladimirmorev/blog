@@ -9,4 +9,11 @@ class PostMailer < ApplicationMailer
     mail(to: "v.morev90@gmail.com", subject: "#{@user.name} created new post")
   end
 
+  def post_approved_email(user, post)
+    @user = user
+    @post = post
+    @url  = post_url(@post)
+    mail(to: @user.email, subject: "Your article has been successfully approved")
+  end
+
 end

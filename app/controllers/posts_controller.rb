@@ -47,6 +47,7 @@ class PostsController < ApplicationController
     @post.approved = !@post.approved
     if @post.save
       if @post.approved
+        PostMailer.post_approved_email(@post.user, @post).deliver_later
         flash[:notice] = "Approved"
       else
         flash[:notice] = "Rejected"
