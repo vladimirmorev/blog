@@ -8,10 +8,11 @@
       %div
         = link_to "#{post.user_name}", user_path(post.user.id)
         = "#{post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
-      %button.btn.btn-default= link_to 'Show', post_path(post)
-      - if can? :edit, post
-        %button.btn.btn-default= link_to 'Edit', edit_post_path(post)
-        %button.btn.btn-default= link_to 'Destroy', post_path(post), |
+      .container
+        = link_to 'Show', post_path(post), class: "btn btn-default"
+        - if can? :edit, post
+          = link_to 'Edit', edit_post_path(post), class: "btn btn-warning"
+          = link_to 'Destroy', post_path(post), class: "btn btn-danger", |
             method: :delete,                    |
             data: { confirm: 'Are you sure?' }  |
 = will_paginate
