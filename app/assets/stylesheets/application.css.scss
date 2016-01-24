@@ -94,3 +94,19 @@ p {
   margin: 20px 0;
   text-align: right;
 }
+
+.btn-reject { 
+  color: #ffffff; 
+  background-color: #777;
+  border-color: #555; 
+}
+
+.btn-reject:hover, 
+.btn-reject:focus, 
+.btn-reject:active, 
+.btn-reject.active, 
+.open .dropdown-toggle.btn-reject {
+  color: #ffffff;
+  background-color: #888;
+  border-color: #444;
+}
