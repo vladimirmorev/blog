@@ -83,11 +83,12 @@ p {
 
 .footer {
   position: absolute;
-  bottom: 0;
+  left: 0;  
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
+  margin-top: 20px;
 }
 
 .footer .container p{
