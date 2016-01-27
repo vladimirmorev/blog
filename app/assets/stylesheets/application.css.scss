@@ -83,12 +83,12 @@ p {
 
 .footer {
   position: absolute;
-  left: 0;  
+  left: 0;
+  bottom: 0;  
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #f5f5f5;
-  margin-top: 20px;
+  background-color: #f5f5f5; 
 }
 
 .footer .container p{
@@ -114,4 +114,8 @@ p {
 
 .container-buttons {
   margin-top: 10px;
+}
+
+.container-post:last-child {
+  margin-bottom: 30px;
 }
