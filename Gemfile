@@ -18,6 +18,7 @@ gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'font-awesome-sass'
 gem 'bootstrap-social-rails', '~> 4.8'
+gem 'local_time', '~> 1.0', '>= 1.0.3'
 
 gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 

@@ -7,7 +7,8 @@
       %p= markdown(truncate(post.body, length: 300))
       %div
         = link_to "#{post.user_name}", user_path(post.user.id)
-        = "#{post.created_at.strftime("posted on %b %d, %Y at %H:%M")}"
+        created at 
+        = local_time_ago(post.created_at)
       %div.container-buttons
         = link_to 'Show', post_path(post), class: "btn btn-default"
         - if can? :edit, post
