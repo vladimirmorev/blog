@@ -1,7 +1,7 @@
 = will_paginate
 %div.row
   - @posts.order('created_at DESC').each do |post|
-    %div.col-sm-12.col-md-10.col-lg-9.col-md-offset-1.container-post
+    .container-post
       %h3
         = link_to post.title, post_path(post)
       %p= markdown(truncate(post.body, length: 300))
@@ -9,7 +9,7 @@
         = link_to "#{post.user_name}", user_path(post.user.id)
         created at
         = local_time_ago(post.created_at)
-      %div.container-buttons
+      .container-buttons
         = link_to 'Show', post_path(post), class: "btn btn-default"
         - if can? :edit, post
           = link_to 'Edit', edit_post_path(post), class: "btn btn-warning"

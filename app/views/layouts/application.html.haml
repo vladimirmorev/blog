@@ -11,9 +11,13 @@
   %body
     .container-fluid
       = render 'layouts/header'
-      %div.scroll-top.hidden-xs
-        %div.arrow-up
+      .scroll-top.hidden-xs
+        .arrow-up
       .container
-        = render 'layouts/messages'
-        = yield
-      = render 'layouts/footer'
+        .row
+          = render 'layouts/messages'
+          .col-md-8.col-md-offset-1.col-xs-12
+            = yield
+          .col-md-3.col-xs-hidden
+            = render 'layouts/right_column'
+        = render 'layouts/footer'
