@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  belongs_to :category
   scope :approved, -> { where(approved: true) }
   delegate :name, :to => :user, :prefix => true
 
