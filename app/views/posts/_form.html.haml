@@ -12,6 +12,8 @@
               %li= msg
       = f.hidden_field :user_id , :value => current_user.id
       .form-group
+        = f.select :category, Category.all, :prompt => "Select One", class: "form-control"
+      .form-group
         = f.label :title
         %br/
         = f.text_field :title, :autofocus => true, class: "form-control"
