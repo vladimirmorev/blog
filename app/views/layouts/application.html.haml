@@ -16,8 +16,8 @@
       .container
         .row
           = render 'layouts/messages'
-          .col-md-8.col-md-offset-1.col-xs-12
+          .col-md-8.col-md-offset-1.col-sm-8.col-xs-12
             = yield
-          .col-md-3.col-xs-hidden
+          .col-md-3.col-sm-4.hidden-xs
             = render 'layouts/right_column'
         = render 'layouts/footer'
